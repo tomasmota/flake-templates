@@ -3,8 +3,8 @@
 
   outputs = { self, ... }: {
     templates = {
-      terraform = {
-        path = ./terraform;
+      terraform-azuread = {
+        path = ./terraform-azuread;
         description = "A terraform flake template";
       };
     };
