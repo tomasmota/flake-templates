@@ -10,8 +10,12 @@
       in
       {
         devShell = pkgs.mkShellNoCC {
+          buildInputs = [
+            (pkgs.terraform.withPlugins (p: with p; [
+              azuread
+            ]))
+          ];
           packages = with pkgs; [
-            terraform
             tflint
             terraform-docs
           ];
