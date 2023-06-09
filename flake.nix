@@ -3,9 +3,9 @@
 
   outputs = { self, ... }: {
     templates = {
-      terraform-azuread = {
-        path = ./terraform-azuread;
-        description = "A terraform flake template";
+      terraform-azure = {
+        path = ./terraform-azure;
+        description = "A terraform flake template for azure";
       };
     };
   };

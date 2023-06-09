@@ -13,6 +13,7 @@
           buildInputs = [
             (pkgs.terraform.withPlugins (p: with p; [
               azuread
+              azurerm
             ]))
           ];
           packages = with pkgs; [
