@@ -20,7 +20,7 @@ resource "azuread_group" "this" {
   display_name = "flake_template_group"
   description  = "This group was created from a flake template"
 
-  owners           = [data.azuread_client_config.current]
+  owners           = [data.azuread_client_config.current.object_id]
   security_enabled = true
 }
 
