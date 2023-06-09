@@ -14,3 +14,16 @@ provider "azuread" {
   # tenant_id     = $ARM_TENANT_ID
 }
 
+data "azuread_client_config" "current" {}
+
+resource "azuread_group" "this" {
+  display_name = "flake_template_group"
+  description  = "This group was created from a flake template"
+
+  owners           = [data.azuread_client_config.current]
+  security_enabled = true
+}
+
+output "group" {
+  value = azuread_group.this.id
+}
