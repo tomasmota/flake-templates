@@ -27,6 +27,7 @@
             alias tfa="terraform apply"
             alias tfp="terraform destroy"
             alias tfs="terraform show"
+            alias tfv="terraform validate"
           '';
         };
       }
