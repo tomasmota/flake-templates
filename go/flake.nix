@@ -16,13 +16,13 @@
         pkgs = import nixpkgs { inherit system ; };
       in
       rec {
-        packages.main = pkgs.buildGoModule {
-          name = "main";
+        packages.goflake = pkgs.buildGoModule {
+          name = "goflake";
           src = gitignore.lib.gitignoreSource ./.;
           vendorHash = null;
         };
 
-        packages.default = packages.main;
+        packages.default = packages.goflake;
 
         devShell = pkgs.mkShellNoCC {
           packages = with pkgs; [
