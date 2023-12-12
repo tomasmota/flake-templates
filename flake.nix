@@ -11,6 +11,10 @@
         path = ./go;
         description = "Go project template";
       };
+      devshell = {
+        path = ./devshell;
+        description = "Devshell flake";
+      };
     };
   };
 }
