@@ -10,6 +10,11 @@ Provides a simple setup for go development
 
 use: `nix flake init -t "github:tomasmota/flake-templates#go"`
 
+## python
+Flake for having packages locally
+
+use: `nix flake init -t "github:tomasmota/flake-templates#python"`
+
 ## devshell
 Flake for having packages locally
 

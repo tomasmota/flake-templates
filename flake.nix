@@ -11,6 +11,10 @@
         path = ./go;
         description = "Go project template";
       };
+      python = {
+        path = ./python;
+        description = "Python flake";
+      };
       devshell = {
         path = ./devshell;
         description = "Devshell flake";
